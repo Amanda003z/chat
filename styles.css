@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	scrollbar-width: thin;
+
+	font-family: "Courier New";
+	--line-blue: rgb(26, 8, 112);
+	--received-blue: rgb(51, 99, 146);
+	--sent-blue: rgb(99, 40, 155);
+}
+
+.chat_container {
+	width: 65vw;
+	height: 340px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.chat_header {
+	user-select: none;
+	height: 8vh;
+	padding: 14px;
+	display: flex;
+	background-color: var(--line-blue);
+	color: #fff;
+	align-items: center;
+	gap: 20px;
+	border-radius: 10px 10px 0 0;
+}
+
+.contact_img {
+	height: 100%;
+}
+
+.contact_img img {
+	height: 100%;
+	border-radius: 50%;
+	opacity: 0.9;
+}
+
+.chatting_area {
+	height: 100%;
+	padding: 25px;
+	display: flex;
+	gap: 13px;
+	flex-direction: column;
+	background-image: url(imgs/bg.png);
+	background-size: cover;
+	filter: brightness(0.7);
+	overflow-y: scroll;
+}
+
+.chatting_area .message {
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.chatting_area .received {
+	margin-right: 50px;
+	background-color: var(--received-blue);
+}
+
+.chatting_area .sent {
+	margin-left: 50px;
+	background-color: var(--sent-blue);
+}
+
+.chatting_area p {
+	color: #ddd;
+	font-size: 0.9em;
+}
+
+.input_area {
+	user-select: none;
+	height: 5vh;
+	padding: 15px 25px;
+	display: flex;
+	background-color: var(--line-blue);
+	border-radius: 0 0 10px 10px;
+	gap: 10px;
+}
+
+.input_area .option {
+	background-color: transparent;
+	color: #ddd;
+	font-weight: bold;
+	font-style: italic;
+	outline: none;
+	border: none;
+	border-left: 5px solid #ddd;
+	border-right: 5px solid transparent;
+
+	transition: border 0.3s, background 0.3s;
+}
+
+.input_area .option:hover {
+	background-color: #ddd;
+	border-right: 5px solid #eee;
+	color: #444;
+}
+
+.input_area input {
+	width: 100%;
+	border: none;
+	padding: 5px 20px;
+}
+
+.input_area input::placeholder {
+	color: #bbb;
+}
+
+.input_area button {
+	cursor: pointer;
+	width: 14vw;
+	letter-spacing: 1px;
+	text-align: center;
+}
